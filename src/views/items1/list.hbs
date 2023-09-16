@@ -1,0 +1,44 @@
+<div class="container p-4 pb-2 mb-5">
+  <div class="row">
+    <div class="col-md-12">
+    {{#if items1}}
+      <table class="listado">
+        <tr>
+          <th>columnaA</th>
+          <th>columnaB</th>
+          <th>columnaC</th>
+          <th>columnaD</th>
+          <th>columnaE</th>
+          <th>columnaF</th>
+          <th>columnaG</th>
+        </tr>
+        {{#each items1}}
+          <tr>
+            <td><a href="/items1/plantilla/{{columnaA}}">{{columnaA}}</a></td>
+            <td>{{columnaB}}</td>
+            <td>{{columnaC}} </td>
+            <td>{{columnaD}}</td>
+            <td>{{columnaE}} </td>
+            <td>{{columnaF}} </td>
+            <td>{{columnaG}} </td>
+          </tr>
+  
+        {{/each}}
+      </table>
+        {{else}}
+          <div class="col-md-4-mx-auto">
+              <div class="card card-body text-center">
+                {{#if obj}}
+                  <tr>No hay items1 guardados con {{obj.filtro}} que contenga {{obj.valor}} <a href="/items1/add"> Crea una!</a></tr>
+                {{else}}
+                  <tr>No hay items1 guardados <a href="/items1/add"> Crea uno!</a></tr>
+
+                {{/if}}
+              </div>
+          </div>
+          {{/if}}
+      <h1>TOTAL: {{suma items1}}</h1>
+
+    </div>
+  </div>
+</div>

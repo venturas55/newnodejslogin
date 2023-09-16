@@ -1,0 +1,22 @@
+<h1>Cambios en el mantenimiento del item1 con columnaA: {{mant.columnaA}}</h1>
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-12 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/items1/mantenimiento/edit/{{mant.id_mantenimiento}}" method="POST">
+                        <div class="form-group">
+                            <div class="form-group"><label for="mantenimiento">MANTENIMIENTO A MODIFICAR</label></div>
+                            <input value="{{mant.id_mantenimiento}}"  type="hidden" name="id_mantenimiento"/>
+                            <input value="{{mant.columnaA}}"  type="hidden" name="columnaA"  />
+                            <input type="date" value="{{formatearEn mant.fecha}}" class="form-control" name="fechaNueva" /> 
+                            <input value="{{mant.mantenimiento}}" class="form-control" type="text" name="mantenimientoNuevo" placeholder="Mantenimiento a modificar" /> </div>
+                            <button class="btn btn-success btn-block">Guardar</button>
+                    </form>
+                    <form action="/items1/plantilla/{{items.columnaA}}" method="GET">
+                                <button class="btn btn-danger btn-block">Cancelar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
